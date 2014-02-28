@@ -1,5 +1,8 @@
 /*
 
+-- always remember to check the input parameter,e.g. null ....
+
+
 - Remove duplicates Question:  use HashTable
 
 - LinkedList Questions:
