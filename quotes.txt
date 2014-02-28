@@ -1,0 +1,11 @@
+/*
+
+- Remove duplicates Question:  use HashTable
+
+- LinkedList Questions:
+--think about using two Nodes, slower, faster...
+-- while(current!= null) {...} uses for removing nodes
+
+
+
+*/
