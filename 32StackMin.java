@@ -50,13 +50,6 @@ public class StackMin{
 		return primaryStack.size();
 	}
 	
-	private int findMin(){
-		if(minStack.isEmpty()){
-			return Integer.MAX_VALUE;
-		}
-		return minStack.peek();
-		
-	}
 
 
 }
