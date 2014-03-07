@@ -51,11 +51,7 @@ public class Solution3 {
 	public static boolean isPermutation3(String a, String b){
 		if(a.length()!= b.length())
 			return false;
-		// for(int i =0 ; i< a.length()/2;i++){
-		// 	if(a.charAt(i)!=b.charAt(b.length-1-i))
-		// 		return false;
-		// }
-		// return true;
+
 		int i=0;
 		int j= a.length -1
 		while(i<j){
