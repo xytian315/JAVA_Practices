@@ -13,7 +13,7 @@ public class Solution{
 		if(start> end)
 			return null;
 
-		int mid = (start+end)/2
+		int mid = (start+end)/2;
 		TreeNode root = new TreeNode(arr[mid]);
 
 		root.left = createMinimalBST(arr, start, mid-1);
