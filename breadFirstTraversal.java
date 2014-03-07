@@ -31,6 +31,8 @@ public class Solution{
 
 		while(!q.isEmpty()){
 			u = q.remove();
+			
+			//dont't forget to check the u!= null!!!!!!
 			if(u!= null){
 				for(Node v: u.getAjacent()){
 					if(v.State == State.Unvisted){
