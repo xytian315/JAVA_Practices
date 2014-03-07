@@ -13,7 +13,7 @@ public class Solution{
 				return false;
 		}
 		if(root.left!= null)
-			if(root.left < min || isValidBST(root.left, min,root.data))
+			if(root.left < min || !isValidBST(root.left, min,root.data))
 			return false;
 	}
 	return true;
