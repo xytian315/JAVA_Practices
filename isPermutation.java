@@ -1,7 +1,7 @@
 /*
 Given two strings, write a method to decide if one is a permutaion of the other
 
-palindrom = anagram
+anagram
 
 possible solution: 1.sort 2. construct array[256] 3. iterate the two strings??
 
