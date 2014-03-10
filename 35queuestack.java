@@ -2,7 +2,7 @@
 3.5 implement a MyQueue class which implements a queue using two stacks
 */
 
-//don't forget to write size() method
+//don't forget to write size() method, and peek() method
 
 public class MyQueue {
 	Stack<E> firstStack;
