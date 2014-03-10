@@ -1,5 +1,8 @@
 /*
 3.4Towers of hanoi.
+
+
+always thinking about base case!!!!!!
 */
 
 
