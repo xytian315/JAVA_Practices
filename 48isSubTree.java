@@ -3,7 +3,7 @@
 and T2, with hundreds of nodes. Create an algorithm to decide if 
 T2 is a subtree of T1.
 
-NOTE: following solution takes O(logn) space, O(n+km)time!!!!!!
+NOTE: following solution takes O(logn+logm) space, O(n+km)time!!!!!!
 */
 
 public boolean subTree(TreeNode t1, TreeNode t2){
