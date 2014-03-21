@@ -13,7 +13,7 @@ public class Permutations() {
 	private StringBuilder out = new StringBuilder();
 	private boolean[] used;
 	
-	public permutations(String str){
+	public Permutations(final String str){
 		in = str;
 		used[] = new boolean[str.length()];
 	}
