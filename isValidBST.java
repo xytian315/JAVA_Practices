@@ -2,21 +2,18 @@
 check if it is a valid balanced search tree
 */
 
-public class Solution{
-	public static boolean isValidBST(Node root){
-		return isValidBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
-	}
+public class Solution {
 
-	private boolean isValidBST(Node root, int min, int max){
-		if(root.right!=null){
-			if(root.right > max || !isValidBST(root.right,root.data,max))
-				return false;
-		}
-		if(root.left!= null)
-			if(root.left < min || !isValidBST(root.left, min,root.data))
-			return false;
+	public boolean isValidBST(TreeNode root){
+		return isValidBST(root,Integer.MIN_VALUE,Integer.MAX_VALUE);	
 	}
-	return true;
+	boolean isValidBST(TreeNode root, int min,int max){
+		//base case
+		if(root == null)
+			return true;
+		if(root.val <=min || root.val>=max)
+			return false;
+		return isValidBST(root.left,min,root.val)&&isValidBST(root.right,root.val,max);
+	}
 
 }
-
