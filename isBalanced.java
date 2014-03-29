@@ -30,7 +30,7 @@ public class Solution{
 		if(heightDiff >1)
 			return -1;
 
-		return Math.max(leftHeight, rightHeight.data)+1;
+		return Math.max(leftHeight, rightHeight)+1;
 
 
 	}
