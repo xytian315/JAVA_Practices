@@ -25,7 +25,7 @@ void sortAnagrams(String[] array){
 	//covert the HashTable into array
 	int index =0;
 	for(String key: table.keySet()){
-		LinedList<String> list =  table.get(key);
+		LinkedList<String> list =  table.get(key);
 
 		for(String s : list){
 			array[index] = s;
