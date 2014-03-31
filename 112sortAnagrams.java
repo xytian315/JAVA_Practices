@@ -5,7 +5,7 @@ are next to each other
 
 void sortAnagrams(String[] array){
 
-	HashTable<String, LinkedList<String>> table = new HashTable<String, LinkedList<String>>();
+	Hashtable<String, LinkedList<String>> table = new Hashtable<String, LinkedList<String>>();
 
 	//put all strings in the array into the HashTable, 
 	//the key is the sorted char
