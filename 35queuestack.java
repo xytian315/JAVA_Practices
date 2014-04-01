@@ -15,7 +15,7 @@ public class MyQueue {
 
 	public void add(E value){
 
-		secondStack.push(value);  //first in first out always add/push to the secondStack!!!!
+		firstStack.push(value);  
 	}
 
 	public E remove(){
