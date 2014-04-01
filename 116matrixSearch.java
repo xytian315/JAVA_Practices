@@ -3,7 +3,7 @@
 order, write a method to find an element.
 
 
-Note: start from matrix[o][col]!!!!!!
+Note: start from matrix[o][matrix[0].length-1]!!!!!!
 */
 
 boolean findElement(int[][] matrix, int element){
