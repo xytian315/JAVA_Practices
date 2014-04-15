@@ -13,6 +13,10 @@ Your function should return length = 2, and A is now [1,2].
 */
 
 /*
+
+time: O(N), space O(1)
+
+
 in place removing elements in array, thinking there are two arrays, the returned array will use the space of 
 the original array, the returned array starts from 0 position, use one temp variable to record the position,
 the original array starts from 1 position
