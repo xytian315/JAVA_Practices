@@ -32,13 +32,13 @@ public class Solution {
        
             
         if(A[start]<= A[mid]){
-            if(target >= A[start] && target< A[mid])
+            if(target >= A[start] && target<= A[mid])
                 return search(A,target, start, mid-1);
             else 
                 return search(A,target,mid+1, end);
         }
-        if(A[mid]<= A[end]){
-            if(target> A[mid] && target<= A[end])
+        if(A[start]> A[mid]){
+            if(target>= A[mid] && target<= A[end])
                 return search(A,target,mid+1, end);
             else
                 return search(A,target,start, mid-1);
@@ -51,7 +51,11 @@ public class Solution {
 
 /*
 note:
-时间复杂度 O(log n),空间复杂度 O(1)
+
+time O(logn), space O(1)
+
 the first mistake: forget the basecase: start <end
 the second mistake: target should be greater than start and less than mid or greater than mid less than end, need to compare both ranges. 
+
+the third mistake: don't forget A[start]= A[mid] because there are probably just two elements
 */
