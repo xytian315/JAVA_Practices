@@ -51,7 +51,7 @@ public class Solution {
 
 /*
 note:
-
+时间复杂度 O(log n),空间复杂度 O(1)
 the first mistake: forget the basecase: start <end
 the second mistake: target should be greater than start and less than mid or greater than mid less than end, need to compare both ranges. 
 */
