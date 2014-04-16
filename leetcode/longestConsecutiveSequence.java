@@ -22,7 +22,67 @@ always think about HashTable!!!!!
 
 
 difficulty: thinking about hashtable, but how to store the value?
-do not know the hash table iterate is ordered
+
+
+use HashSet, and iterate the elements, check the left elements and right elements of each element,
+
+after check, remember to remove it!!!!
+
+
+
+
+*/
+
+
+import java.util.HashSet;
+public class Solution {
+	public int longestConsecutive(int[] num){
+		
+		Set<Integer> set = new HashSet<Integer>();
+		
+		//add all the numbers into a set
+		for(int i : num)
+			set.add(i);
+			
+		int result =0;
+		
+		//iterate all the elements and check the left and right
+		for(int i : num){
+			int count =1;
+			int left = i-1;
+			int right = i+1;
+			
+			//check the left elements
+			while(set.contains(left)){
+				count++;
+				set.remove(left); // most important, remove the elements
+				left--;
+			
+			}
+			//check the right elements
+			while(set.contains(right)){
+				count++;
+				set.remove(right);
+				right++;			
+			}
+			
+			result = Math.max(count, result);
+		
+		}	
+		return result;
+		
+	
+	}
+
+
+}
+
+
+
+
+/*
+
+
 
 Start from one of them, iterate upwards and downwards to find the longest consecutive sequence, 
 and set visited flag for each visited number.
@@ -32,13 +92,9 @@ Think as cluster merge, a single number is a length=1 cluster.
 The key factors about a cluster is: lowest, highest, and length.
 Map lowest and highest to length. To merge two neighbor clusters, only need to update it's new lowest and highest, with new length.
 For every a[i], checking its neighbor a[i]-1 and a[i]+1 is enough.
-http://discuss.leetcode.com/questions/1070/longest-consecutive-sequence
+http://discuss.leetcode.com/questions/1070/longest-consecutive-sequence 
+
 */
-
-
-
-
-
 
 
 //not efficient O(n2)
