@@ -15,39 +15,56 @@ The solution set must not contain duplicate triplets.
 */
 
 
-import java.util.Hashtable;
 public class Solution {
     public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
-        //the result: 
+        //result
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         
+        //check input
+        if(num.length< 3)
+            return result;
+        
+        //sort the array
         Arrays.sort(num);
         
-        for(int i=0; i< num.length-2; i++){
-            int negative = - num[i];
-            
-            int start = i+1;
-            int end = num.length -1;
-            
-            while(start<end){
-                if(num[start]+num[end]== negative){
-                    ArrayList<Integer> arr = new ArrayList<Integer>();
-                    arr.add(i);
-                    arr.add(start);
-                    arr.add(end);
-                    result.add(arr);
-                }else if(num[start]+num[end] < negative){
-                    start++;
-                }else
-                    end--;
+        for(int i =0; i< num.length-2; i++){
+            //check the duplicates remove the duplicate case
+            if(i==0 || num[i] > num[i-1]){
+                int negative = -num[i];
+                int start = i+1;
+                int end = num.length-1;
                 
+                while(start< end){
+                    if(num[start]+num[end] == negative){
+                        ArrayList<Integer> temp = new ArrayList<Integer>();
+                        
+                        temp.add(num[i]);
+                        temp.add(num[start]);
+                        temp.add(num[end]);
+                        
+                        result.add(temp);
+                        //don't forget to more start and end pointer!!!!!!!!
+                        start++;
+                        end--;
+                        //remove the duplicate case
+                        while(start<end && num[start]== num[start-1]){
+                            start++;
+                        }
+                        while(start< end && num[end] == num[end+1]){
+                            end--;
+                        }
+                    }else if(num[start]+num[end] < negative){
+                        start++;
+                    }else{
+                        end--;
+                    }
+                }
             }
         }
         return result;
-        
-        
     }
 }
+
 
 
 /*
@@ -58,5 +75,7 @@ note :
 
 
 don't forget to check the duplicates!!!!!
+
+and don't forget to more the start and end pointer when found the match result, since there might be other match results. 
 
 */
