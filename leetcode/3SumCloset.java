@@ -13,7 +13,7 @@ thought: first sort the array,
 
 and then iterate the sorted array, make two pointers start and end(of the array), compare the sum with the target, move the pointers based on different situation. 
 
-the following code is more readable after I search the answer
+the following code is more readable after I search the answer 先排序,然后左右夹逼,复杂度 O(n2)。
 */
 public class Solution {
     public int threeSumClosest(int[] num, int target) {
