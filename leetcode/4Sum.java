@@ -71,4 +71,5 @@ can use a HashSet to remove duplicates!!!!
 
 // 先排序,然后左右夹逼,时间复杂度 O(n^3),空间复杂度 O(1)
 
+can have other methods???? O(n2)? use HashMap??
 */
