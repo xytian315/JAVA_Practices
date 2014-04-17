@@ -68,5 +68,6 @@ public class Solution{
 
 /*
 should we just check the case 9 row, 9 col, 9 subbox???
-
+the first mistake: boolean checker index from 0 not 1
+have difficulty to loop subbox
 */
