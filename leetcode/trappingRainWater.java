@@ -17,7 +17,7 @@ For example, Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
 */
 
 
-//the following are my codes: 
+//the following are my codes: I make a Hashtable to store the values, but actually we can make two arrays to store maxLeft and maxRight
 
 
 import java.util.Hashtable; 
@@ -62,4 +62,40 @@ public class Solution {
         
     }
 }
+
+
+//the following are the answers code
+
+public class Solution {
+    public int trap(int[] A) {
+        
+        int result =0; 
+        if(A.length<=2)
+            return result; 
+        //intinitate two arrays to store the maxLeft and maxRight to the corresponding index
+        int[] maxLeft = new int[A.length];
+        int[] maxRight = new int[A.length];
+        
+        maxLeft[0] = A[0];
+        maxRight[A.length-1] = A[A.length-1];
+        
+        //loop the array to find the corresponding index
+        //use A.lenght-1-i trick so we don't need to loop twice of the array,but be careful about the index!!
+        
+        for(int i =1; i< A.length; i++){
+            maxLeft[i] = Math.max(maxLeft[i-1], A[i-1]);
+            maxRight[A.length-1-i] = Math.max(maxRight[A.length-i], A[A.length-i]);
+        }
+        
+        for(int i=1; i < A.length-1; i++){
+            int temp = Math.min(maxLeft[i],maxRight[i]);
+            if(temp - A[i]>0)
+                result += temp-A[i];
+        }
+    
+       return result;
+        
+    }
+}
+
 
