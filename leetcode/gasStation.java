@@ -13,7 +13,7 @@ The solution is guaranteed to be unique.
 
 
 //O(N ) 的解法是,设置两个变量,sum 判断当前的指针的有效性;total 则判断整个数组是否有 解,有就返回通过 sum 得到的下标,没有则返回 -1。
-
+//trick: use one variable to mark the pointer of the index 
 public class Solution {
 
 	public int canCompleteCircuit(int[] gas, int[] cost){
